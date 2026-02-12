@@ -1,5 +1,9 @@
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const assetPath = (path: string) => {
-  // For Vercel deployment, just return the path as-is
-  // Assets in /public are served from root
-  return path;
+  if (path.startsWith("/")) {
+    return `${basePath}${path}`;
+  }
+
+  return `${basePath}/${path}`;
 };
