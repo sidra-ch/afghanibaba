@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { assetPath } from "@/lib/assetPath";
 
 const highlights = [
@@ -95,7 +97,7 @@ const sections = [
     id: "busy-routes",
     image: assetPath("/assets/bg.jpg"),
     titleEn: "Buy bus tickets for busy routes",
-    titleFa: "خرید بلیط اتوبوس برای مسیرهای پرتردد",,
+    titleFa: "خرید بلیط اتوبوس برای مسیرهای پرتردد",
     textEn:
       "High-demand routes often sell out quickly. Online booking helps you secure seats during peak seasons.",
     textFa:
@@ -194,15 +196,14 @@ const magazine = [
 
 const footerLinks = [
   {
-    titleEn: "Alibaba",
-    titleFa: "علی بابا",
+    titleEn: "افغانی‌بابا",
+    titleFa: "افغانی‌بابا",
     links: [
       "About us",
       "Contact us",
-      "Why Alibaba?",
-      "Alibaba Plus",
-      "Travel insurance",
-      "Alibaba Magazine",
+      "Why Afghanibaba?",
+      "Afghanibaba Plus",
+      "Afghanibaba Magazine",
     ],
   },
   {
@@ -254,6 +255,7 @@ const badges = [
 export default function BusInfoPage() {
   return (
     <div className="min-h-screen bg-[#f5f6f8]">
+      <Navbar />
       <main>
         <section className="bg-white">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 lg:grid-cols-[1.1fr_0.9fr]">
@@ -273,7 +275,7 @@ export default function BusInfoPage() {
                 است و تجربه ای آرام تر و پایدارتر ارائه می دهد.
               </p>
             </div>
-            <div className="rounded-3xl border border-black/5 bg-[#fff7f0] p-6 text-right shadow-lg shadow-black/5">
+            <div className="rounded-3xl border border-black/5 bg-[#fff7e0] p-6 text-right shadow-lg shadow-black/5">
               <h2 className="text-xl font-semibold text-slate-900">
                 What you will learn | چه چیزهایی می آموزید
               </h2>
@@ -480,12 +482,13 @@ export default function BusInfoPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-8 rounded-2xl bg-[#fff7f0] p-4 text-sm text-slate-600">
+            <div className="mt-8 rounded-2xl bg-[#fff7e0] p-4 text-sm text-slate-600">
               Support Phone: 021 - 43900000 | شماره پشتیبانی: ۰۲۱ - ۴۳۹۰۰۰۰۰
             </div>
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

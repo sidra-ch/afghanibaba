@@ -13,9 +13,9 @@
   --bronze-600: #9a642f;
   --emerald-600: #0f766e;
   --sky-500: #0ea5e9;
-  --brand-500: #ff7a00;
-  --brand-600: #e96e00;
-  --brand-100: #fff1e6;
+  --brand-500: #FDB713;
+  --brand-600: #e6a512;
+  --brand-100: #fff7e0;
   --cream: #fdfbf7;
   --radius: 0.625rem;
 }
@@ -32,15 +32,15 @@ img {
 
 @layer components {
   .btn-primary {
-    @apply rounded-full bg-[#ff7a00] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ff7a00]/20 transition hover:bg-[#e96e00];
+    @apply rounded-full bg-[#FDB713] px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-[#FDB713]/20 transition hover:bg-[#e6a512];
   }
 
   .btn-secondary {
-    @apply rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-black/30 hover:bg-[#fff7f0];
+    @apply rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-black/30 hover:bg-[#fff7e0];
   }
 
   .input-field {
-    @apply h-12 w-full rounded-2xl border border-black/10 bg-white px-4 text-right text-sm text-slate-700 shadow-sm focus:border-[#ff7a00] focus:outline-none;
+    @apply h-12 w-full rounded-2xl border border-black/10 bg-white px-4 text-right text-sm text-slate-700 shadow-sm focus:border-[#FDB713] focus:outline-none;
   }
 
   .pill {

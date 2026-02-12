@@ -3,58 +3,61 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t border-black/5 bg-white">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 text-right md:grid-cols-4">
-        <div>
-          <h3 className="text-lg font-semibold text-slate-900">افغانی‌بابا</h3>
-          <p className="mt-3 text-sm text-slate-600">
-            رزرو حرفه‌ای بلیط، هتل، اتوبوس، تور و بیمه مسافرتی در افغانستان.
-          </p>
+      <div className="mx-auto max-w-6xl px-4 py-12">
+        <div className="grid gap-8 text-right md:grid-cols-4">
+          <div>
+            <h3 className="text-lg font-semibold text-black">افغانی‌بابا</h3>
+            <p className="mt-3 text-sm text-slate-600">
+              شرکت خدمات گردشگری افغانی‌بابا با هدف ساده‌سازی فرآیند رزرو سفر فعالیت خود را آغاز کرده است.
+            </p>
+            <div className="mt-4 flex gap-3">
+              <Link href="#" className="text-slate-500 hover:text-slate-700">تلگرام</Link>
+              <Link href="#" className="text-slate-500 hover:text-slate-700">اینستاگرام</Link>
+              <Link href="#" className="text-slate-500 hover:text-slate-700">توییتر</Link>
+            </div>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-slate-400">علی‌بابا</p>
+            <ul className="mt-4 space-y-2 text-sm text-slate-600">
+              <li><Link href="#" className="hover:text-[#FDB713]">درباره ما</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">تماس با ما</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">چرا افغانی‌بابا</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">افغانی‌بابا پلاس</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">بیمه مسافرتی</Link></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-slate-400">خدمات مشتریان</p>
+            <ul className="mt-4 space-y-2 text-sm text-slate-600">
+              <li><Link href="#" className="hover:text-[#FDB713]">مرکز پشتیبانی آنلاین</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">راهنمای خرید</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">راهنمای استرداد</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">قوانین و مقررات</Link></li>
+              <li><Link href="#" className="hover:text-[#FDB713]">سوالات متداول</Link></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-slate-400">تماس</p>
+            <ul className="mt-4 space-y-2 text-sm text-slate-600">
+              <li>۰۲۱ - ۴۳۹۰۰۰۰۰</li>
+              <li>info@afghanibaba.com</li>
+              <li>کابل، افغانستان</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-400">خدمات</p>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600">
-            <li>
-              <Link href="/hotels">هتل</Link>
-            </li>
-            <li>
-              <Link href="/flights">پرواز</Link>
-            </li>
-            <li>
-              <Link href="/bus">اتوبوس</Link>
-            </li>
-            <li>
-              <Link href="/insurance">بیمه</Link>
-            </li>
-          </ul>
+        
+        <div className="mt-8 border-t border-black/5 pt-8">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-4 text-sm text-slate-500">
+              <Link href="#">قوانین و مقررات</Link>
+              <Link href="#">حریم خصوصی</Link>
+              <Link href="#"> نقشه سایت</Link>
+            </div>
+            <p className="text-sm text-slate-500">
+              © ۱۴۰۵ - شرکت خدمات گردشگری افغانی‌بابا - تمامی حقوق محفوظ است
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-400">شرکت</p>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600">
-            <li>
-              <Link href="#">درباره ما</Link>
-            </li>
-            <li>
-              <Link href="#">فرصت‌های شغلی</Link>
-            </li>
-            <li>
-              <Link href="#">همکاران</Link>
-            </li>
-            <li>
-              <Link href="#">اخبار</Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-400">تماس</p>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600">
-            <li>+۹۳ (۰) ۷۰۰ ۰۰۰ ۰۰۰</li>
-            <li>support@afghanibaba.com</li>
-            <li>کابل، افغانستان</li>
-          </ul>
-        </div>
-      </div>
-      <div className="border-t border-black/5 py-4 text-center text-xs text-slate-500">
-        © 2026 Afghanibaba. All rights reserved.
       </div>
     </footer>
   );
