@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
+  "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/out",
   "framework": null,
-  "installCommand": "echo 'Using custom buildCommand'",
+  "installCommand": "cd frontend && npm ci",
   "devCommand": "cd frontend && npm run dev"
 }
