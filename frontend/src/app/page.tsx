@@ -273,8 +273,6 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/10" />
           <div className="absolute inset-0">
-            <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,122,0,0.25),_transparent_55%)]" />
-            <div className="absolute right-0 top-0 h-full w-full bg-[radial-gradient(circle_at_80%_20%,_rgba(59,130,246,0.28),_transparent_45%)]" />
           </div>
 
           <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-12">
