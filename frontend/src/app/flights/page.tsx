@@ -9,7 +9,7 @@ export default function FlightsPage() {
       <main className="mx-auto max-w-6xl px-4 py-16 text-right">
         <div className="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-lg shadow-black/5">
           <img
-            src={assetPath("/assets/img/image-24.jpg")}
+            src={assetPath("/assets/kabul-hero.jpg")}
             alt="بلیط پرواز"
             className="h-48 w-full object-cover object-center"
           />

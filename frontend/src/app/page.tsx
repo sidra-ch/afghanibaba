@@ -5,12 +5,12 @@ import SearchTabs from "@/components/search/SearchTabs";
 import { assetPath } from "@/lib/assetPath";
 
 const quickServices = [
-  { title: "پرواز داخلی", desc: "بلیط لحظه‌ای و چارتر", image: assetPath("/assets/img/grid-1.jpg") },
-  { title: "پرواز خارجی", desc: "قیمت رقابتی و پشتیبانی", image: assetPath("/assets/img/grid-2.jpg") },
-  { title: "هتل", desc: "رزرو فوری با تخفیف", image: assetPath("/assets/img/grid-3.jpg") },
-  { title: "اتوبوس", desc: "انتخاب صندلی و مسیر", image: assetPath("/assets/img/grid-4.jpg") },
-  { title: "تور", desc: "پکیج‌های آماده سفر", image: assetPath("/assets/img/grid-5.jpg") },
-  { title: "بیمه", desc: "پوشش کامل مسافرتی", image: assetPath("/assets/img/grid-6.jpg") },
+  { title: "پرواز داخلی", desc: "بلیط لحظه‌ای و چارتر", image: assetPath("/assets/kabul-hero.jpg") },
+  { title: "پرواز خارجی", desc: "قیمت رقابتی و پشتیبانی", image: assetPath("/assets/herat-hero.jpg") },
+  { title: "هتل", desc: "رزرو فوری با تخفیف", image: assetPath("/assets/mazar-hero.jpg") },
+  { title: "اتوبوس", desc: "انتخاب صندلی و مسیر", image: assetPath("/assets/bamyan-tour.jpg") },
+  { title: "تور", desc: "پکیج‌های آماده سفر", image: assetPath("/assets/panjshir-tour.jpg") },
+  { title: "بیمه", desc: "پوشش کامل مسافرتی", image: assetPath("/assets/kandahar-tour.jpg") },
 ];
 
 const promos = [
@@ -66,17 +66,17 @@ const guides = [
   {
     title: "راهنمای سفر به دوبی",
     desc: "بهترین زمان سفر و نکات ویزا.",
-    image: assetPath("/assets/img/blog-1.jpg"),
+    image: assetPath("/assets/band-e-amir-hero.jpg"),
   },
   {
     title: "هزینه‌های سفر به استانبول",
     desc: "بودجه‌بندی دقیق و حمل و نقل.",
-    image: assetPath("/assets/img/blog-2.jpg"),
+    image: assetPath("/assets/ghazni-tour.jpg"),
   },
   {
     title: "اقامت اقتصادی در کابل",
     desc: "هتل‌ها و اقامتگاه‌های امن.",
-    image: assetPath("/assets/img/blog-3.jpg"),
+    image: assetPath("/assets/heart-tour.jpg"),
   },
 ];
 
@@ -99,19 +99,19 @@ const otherServices = [
     titleEn: "Safar Card (Corporate)",
     titleFa: "سفرکارت (سازمانی)",
     badge: "New",
-    image: assetPath("/assets/img/image-10.avif"),
+    image: assetPath("/assets/about-2.jpg"),
   },
   {
     titleEn: "Installment travel",
     titleFa: "سفر اقساطی",
     badge: "جدید",
-    image: assetPath("/assets/img/image-11.avif"),
+    image: assetPath("/assets/about-3.jpg"),
   },
   {
     titleEn: "Travel visa",
     titleFa: "ویزای سفر",
     badge: null,
-    image: assetPath("/assets/img/image-12.avif"),
+    image: assetPath("/assets/about-4.jpg"),
   },
 ];
 
@@ -119,12 +119,12 @@ const usefulBanners = [
   {
     titleEn: "Useful links",
     titleFa: "لینک های مفید",
-    image: assetPath("/assets/img/banner-7.jpg"),
+    image: assetPath("/assets/banner-7.jpg"),
   },
   {
     titleEn: "Special offers",
     titleFa: "پیشنهادهای ویژه",
-    image: assetPath("/assets/img/banner-8.jpg"),
+    image: assetPath("/assets/banner-8.jpg"),
   },
 ];
 
@@ -264,14 +264,14 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <section className="relative overflow-hidden bg-[#0b1220] text-white">
+        <section className="relative overflow-hidden bg-white text-white">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('${assetPath("/assets/img/home-page.webp")}')`,
+              backgroundImage: `url('${assetPath("/assets/home-page.webp")}')`,
             }}
           />
-          <div className="absolute inset-0 bg-black/35" />
+          <div className="absolute inset-0 bg-black/10" />
           <div className="absolute inset-0">
             <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,122,0,0.25),_transparent_55%)]" />
             <div className="absolute right-0 top-0 h-full w-full bg-[radial-gradient(circle_at_80%_20%,_rgba(59,130,246,0.28),_transparent_45%)]" />
@@ -433,7 +433,7 @@ export default function Home() {
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <div className="h-20 w-20 overflow-hidden rounded-2xl bg-white/10">
                   <img
-                    src={assetPath("/assets/img/thumb.jpg")}
+                    src={assetPath("/assets/logo-img.png")}
                     alt="QR"
                     className="h-full w-full object-cover object-center"
                   />

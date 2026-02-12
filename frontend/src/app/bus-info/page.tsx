@@ -23,7 +23,7 @@ const highlights = [
 const sections = [
   {
     id: "buy-online",
-    image: assetPath("/assets/img/banner-4.jpg"),
+    image: assetPath("/assets/banner-4.jpg"),
     titleEn: "Buy bus tickets online",
     titleFa: "خرید آنلاین بلیط اتوبوس",
     textEn:
@@ -33,7 +33,7 @@ const sections = [
   },
   {
     id: "refund",
-    image: assetPath("/assets/img/banner-5.jpg"),
+    image: assetPath("/assets/banner-5.jpg"),
     titleEn: "Online bus ticket refund",
     titleFa: "استرداد آنلاین بلیط اتوبوس",
     textEn:
@@ -43,7 +43,7 @@ const sections = [
   },
   {
     id: "group-buy",
-    image: assetPath("/assets/img/banner-6.jpg"),
+    image: assetPath("/assets/banner-6.jpg"),
     titleEn: "Group buying",
     titleFa: "خرید گروهی",
     textEn:
@@ -53,7 +53,7 @@ const sections = [
   },
   {
     id: "price",
-    image: assetPath("/assets/img/image-24.jpg"),
+    image: assetPath("/assets/kabul-hero.jpg"),
     titleEn: "Bus ticket price",
     titleFa: "قیمت بلیط اتوبوس",
     textEn:
@@ -63,7 +63,7 @@ const sections = [
   },
   {
     id: "reservation",
-    image: assetPath("/assets/img/image-25.jpg"),
+    image: assetPath("/assets/about.jpg"),
     titleEn: "Bus ticket reservation",
     titleFa: "رزرو بلیط اتوبوس",
     textEn:
@@ -73,7 +73,7 @@ const sections = [
   },
   {
     id: "cabins",
-    image: assetPath("/assets/img/image-26.jpg"),
+    image: assetPath("/assets/banner.jpg"),
     titleEn: "VIP seats and comfort",
     titleFa: "صندلی های VIP و راحتی",
     textEn:
@@ -83,7 +83,7 @@ const sections = [
   },
   {
     id: "students",
-    image: assetPath("/assets/img/image-27.jpg"),
+    image: assetPath("/assets/bamyan-tour.jpg"),
     titleEn: "Bus tickets for student trips",
     titleFa: "بلیط اتوبوس برای سفرهای دانشجویی",
     textEn:
@@ -93,9 +93,9 @@ const sections = [
   },
   {
     id: "busy-routes",
-    image: assetPath("/assets/img/image-28.jpg"),
+    image: assetPath("/assets/bg.jpg"),
     titleEn: "Buy bus tickets for busy routes",
-    titleFa: "خرید بلیط اتوبوس برای مسیرهای پرتردد",
+    titleFa: "خرید بلیط اتوبوس برای مسیرهای پرتردد",,
     textEn:
       "High-demand routes often sell out quickly. Online booking helps you secure seats during peak seasons.",
     textFa:
@@ -103,7 +103,7 @@ const sections = [
   },
   {
     id: "tehran-mashhad",
-    image: assetPath("/assets/img/image-29.jpg"),
+    image: assetPath("/assets/about-1.jpg"),
     titleEn: "Tehran - Mashhad bus ticket",
     titleFa: "بلیط اتوبوس تهران - مشهد",
     textEn:
@@ -114,10 +114,10 @@ const sections = [
 ];
 
 const companies = [
-  { nameEn: "Raja coaches", nameFa: "اتوبوس های رجا", logo: assetPath("/assets/img/thumb-1.jpg") },
-  { nameEn: "Banrail coaches", nameFa: "اتوبوس های بان ریل", logo: assetPath("/assets/img/thumb-2.jpg") },
-  { nameEn: "Fadak coaches", nameFa: "اتوبوس های فدک", logo: assetPath("/assets/img/thumb-3.jpg") },
-  { nameEn: "Noor Reza coaches", nameFa: "اتوبوس های نور رضا", logo: assetPath("/assets/img/thumb.jpg") },
+  { nameEn: "Raja coaches", nameFa: "اتوبوس های رجا", logo: assetPath("/assets/logo-img.png") },
+  { nameEn: "Banrail coaches", nameFa: "اتوبوس های بان ریل", logo: assetPath("/assets/logo-img.png") },
+  { nameEn: "Fadak coaches", nameFa: "اتوبوس های فدك", logo: assetPath("/assets/logo-img.png") },
+  { nameEn: "Noor Reza coaches", nameFa: "اتوبوس های نور رضا", logo: assetPath("/assets/logo-img.png") },
 ];
 
 const companyDetails = [
