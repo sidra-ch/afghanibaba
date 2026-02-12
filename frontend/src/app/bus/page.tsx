@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { assetPath } from "@/lib/assetPath";
 
 export default function BusPage() {
   return (
@@ -8,7 +9,7 @@ export default function BusPage() {
       <main className="mx-auto max-w-6xl px-4 py-16 text-right">
         <div className="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-lg shadow-black/5">
           <img
-            src="/assets/img/image-26.jpg"
+            src={assetPath("/assets/img/image-26.jpg")}
             alt="بلیط اتوبوس"
             className="h-48 w-full object-cover object-center"
           />

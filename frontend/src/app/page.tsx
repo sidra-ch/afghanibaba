@@ -2,14 +2,15 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SearchTabs from "@/components/search/SearchTabs";
+import { assetPath } from "@/lib/assetPath";
 
 const quickServices = [
-  { title: "پرواز داخلی", desc: "بلیط لحظه‌ای و چارتر", image: "/assets/img/grid-1.jpg" },
-  { title: "پرواز خارجی", desc: "قیمت رقابتی و پشتیبانی", image: "/assets/img/grid-2.jpg" },
-  { title: "هتل", desc: "رزرو فوری با تخفیف", image: "/assets/img/grid-3.jpg" },
-  { title: "اتوبوس", desc: "انتخاب صندلی و مسیر", image: "/assets/img/grid-4.jpg" },
-  { title: "تور", desc: "پکیج‌های آماده سفر", image: "/assets/img/grid-5.jpg" },
-  { title: "بیمه", desc: "پوشش کامل مسافرتی", image: "/assets/img/grid-6.jpg" },
+  { title: "پرواز داخلی", desc: "بلیط لحظه‌ای و چارتر", image: assetPath("/assets/img/grid-1.jpg") },
+  { title: "پرواز خارجی", desc: "قیمت رقابتی و پشتیبانی", image: assetPath("/assets/img/grid-2.jpg") },
+  { title: "هتل", desc: "رزرو فوری با تخفیف", image: assetPath("/assets/img/grid-3.jpg") },
+  { title: "اتوبوس", desc: "انتخاب صندلی و مسیر", image: assetPath("/assets/img/grid-4.jpg") },
+  { title: "تور", desc: "پکیج‌های آماده سفر", image: assetPath("/assets/img/grid-5.jpg") },
+  { title: "بیمه", desc: "پوشش کامل مسافرتی", image: assetPath("/assets/img/grid-6.jpg") },
 ];
 
 const promos = [
@@ -17,19 +18,19 @@ const promos = [
     title: "بلیت خارجی با تخفیف فوری",
     desc: "پروازهای دبی، استانبول و دهلی با نرخ ویژه.",
     tag: "پیشنهاد محدود",
-    image: "/assets/img/banner-1.jpg",
+    image: assetPath("/assets/img/banner-1.jpg"),
   },
   {
     title: "اقامت امن در کابل",
     desc: "رزرو هتل‌های منتخب با پرداخت در محل.",
     tag: "پیشنهاد هتل",
-    image: "/assets/img/banner-2.jpg",
+    image: assetPath("/assets/img/banner-2.jpg"),
   },
   {
     title: "تورهای نوروزی",
     desc: "پکیج کامل سفر خانوادگی با راهنما.",
     tag: "تور ویژه",
-    image: "/assets/img/banner-3.jpg",
+    image: assetPath("/assets/img/banner-3.jpg"),
   },
 ];
 
@@ -65,17 +66,17 @@ const guides = [
   {
     title: "راهنمای سفر به دوبی",
     desc: "بهترین زمان سفر و نکات ویزا.",
-    image: "/assets/img/blog-1.jpg",
+    image: assetPath("/assets/img/blog-1.jpg"),
   },
   {
     title: "هزینه‌های سفر به استانبول",
     desc: "بودجه‌بندی دقیق و حمل و نقل.",
-    image: "/assets/img/blog-2.jpg",
+    image: assetPath("/assets/img/blog-2.jpg"),
   },
   {
     title: "اقامت اقتصادی در کابل",
     desc: "هتل‌ها و اقامتگاه‌های امن.",
-    image: "/assets/img/blog-3.jpg",
+    image: assetPath("/assets/img/blog-3.jpg"),
   },
 ];
 
@@ -98,19 +99,19 @@ const otherServices = [
     titleEn: "Safar Card (Corporate)",
     titleFa: "سفرکارت (سازمانی)",
     badge: "New",
-    image: "/assets/img/image-10.avif",
+    image: assetPath("/assets/img/image-10.avif"),
   },
   {
     titleEn: "Installment travel",
     titleFa: "سفر اقساطی",
     badge: "جدید",
-    image: "/assets/img/image-11.avif",
+    image: assetPath("/assets/img/image-11.avif"),
   },
   {
     titleEn: "Travel visa",
     titleFa: "ویزای سفر",
     badge: null,
-    image: "/assets/img/image-12.avif",
+    image: assetPath("/assets/img/image-12.avif"),
   },
 ];
 
@@ -118,12 +119,12 @@ const usefulBanners = [
   {
     titleEn: "Useful links",
     titleFa: "لینک های مفید",
-    image: "/assets/img/banner-7.jpg",
+    image: assetPath("/assets/img/banner-7.jpg"),
   },
   {
     titleEn: "Special offers",
     titleFa: "پیشنهادهای ویژه",
-    image: "/assets/img/banner-8.jpg",
+    image: assetPath("/assets/img/banner-8.jpg"),
   },
 ];
 
@@ -266,7 +267,9 @@ export default function Home() {
         <section className="relative overflow-hidden bg-[#0b1220] text-white">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/assets/img/home-page.webp')" }}
+            style={{
+              backgroundImage: `url('${assetPath("/assets/img/home-page.webp")}')`,
+            }}
           />
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0">
@@ -430,7 +433,7 @@ export default function Home() {
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <div className="h-20 w-20 overflow-hidden rounded-2xl bg-white/10">
                   <img
-                    src="/assets/img/thumb.jpg"
+                    src={assetPath("/assets/img/thumb.jpg")}
                     alt="QR"
                     className="h-full w-full object-cover object-center"
                   />

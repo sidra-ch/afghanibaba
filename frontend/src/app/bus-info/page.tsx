@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 const highlights = [
   {
@@ -22,7 +23,7 @@ const highlights = [
 const sections = [
   {
     id: "buy-online",
-    image: "/assets/img/banner-4.jpg",
+    image: assetPath("/assets/img/banner-4.jpg"),
     titleEn: "Buy bus tickets online",
     titleFa: "خرید آنلاین بلیط اتوبوس",
     textEn:
@@ -32,7 +33,7 @@ const sections = [
   },
   {
     id: "refund",
-    image: "/assets/img/banner-5.jpg",
+    image: assetPath("/assets/img/banner-5.jpg"),
     titleEn: "Online bus ticket refund",
     titleFa: "استرداد آنلاین بلیط اتوبوس",
     textEn:
@@ -42,7 +43,7 @@ const sections = [
   },
   {
     id: "group-buy",
-    image: "/assets/img/banner-6.jpg",
+    image: assetPath("/assets/img/banner-6.jpg"),
     titleEn: "Group buying",
     titleFa: "خرید گروهی",
     textEn:
@@ -52,7 +53,7 @@ const sections = [
   },
   {
     id: "price",
-    image: "/assets/img/image-24.jpg",
+    image: assetPath("/assets/img/image-24.jpg"),
     titleEn: "Bus ticket price",
     titleFa: "قیمت بلیط اتوبوس",
     textEn:
@@ -62,7 +63,7 @@ const sections = [
   },
   {
     id: "reservation",
-    image: "/assets/img/image-25.jpg",
+    image: assetPath("/assets/img/image-25.jpg"),
     titleEn: "Bus ticket reservation",
     titleFa: "رزرو بلیط اتوبوس",
     textEn:
@@ -72,7 +73,7 @@ const sections = [
   },
   {
     id: "cabins",
-    image: "/assets/img/image-26.jpg",
+    image: assetPath("/assets/img/image-26.jpg"),
     titleEn: "VIP seats and comfort",
     titleFa: "صندلی های VIP و راحتی",
     textEn:
@@ -82,7 +83,7 @@ const sections = [
   },
   {
     id: "students",
-    image: "/assets/img/image-27.jpg",
+    image: assetPath("/assets/img/image-27.jpg"),
     titleEn: "Bus tickets for student trips",
     titleFa: "بلیط اتوبوس برای سفرهای دانشجویی",
     textEn:
@@ -92,7 +93,7 @@ const sections = [
   },
   {
     id: "busy-routes",
-    image: "/assets/img/image-28.jpg",
+    image: assetPath("/assets/img/image-28.jpg"),
     titleEn: "Buy bus tickets for busy routes",
     titleFa: "خرید بلیط اتوبوس برای مسیرهای پرتردد",
     textEn:
@@ -102,7 +103,7 @@ const sections = [
   },
   {
     id: "tehran-mashhad",
-    image: "/assets/img/image-29.jpg",
+    image: assetPath("/assets/img/image-29.jpg"),
     titleEn: "Tehran - Mashhad bus ticket",
     titleFa: "بلیط اتوبوس تهران - مشهد",
     textEn:
@@ -113,10 +114,10 @@ const sections = [
 ];
 
 const companies = [
-  { nameEn: "Raja coaches", nameFa: "اتوبوس های رجا", logo: "/assets/img/thumb-1.jpg" },
-  { nameEn: "Banrail coaches", nameFa: "اتوبوس های بان ریل", logo: "/assets/img/thumb-2.jpg" },
-  { nameEn: "Fadak coaches", nameFa: "اتوبوس های فدک", logo: "/assets/img/thumb-3.jpg" },
-  { nameEn: "Noor Reza coaches", nameFa: "اتوبوس های نور رضا", logo: "/assets/img/thumb.jpg" },
+  { nameEn: "Raja coaches", nameFa: "اتوبوس های رجا", logo: assetPath("/assets/img/thumb-1.jpg") },
+  { nameEn: "Banrail coaches", nameFa: "اتوبوس های بان ریل", logo: assetPath("/assets/img/thumb-2.jpg") },
+  { nameEn: "Fadak coaches", nameFa: "اتوبوس های فدک", logo: assetPath("/assets/img/thumb-3.jpg") },
+  { nameEn: "Noor Reza coaches", nameFa: "اتوبوس های نور رضا", logo: assetPath("/assets/img/thumb.jpg") },
 ];
 
 const companyDetails = [
@@ -177,17 +178,17 @@ const magazine = [
   {
     titleEn: "How to travel to Mashhad at the lowest cost?",
     titleFa: "چگونه با کمترین هزینه به مشهد سفر کنیم؟",
-    image: "/assets/img/blog-4.jpg",
+    image: assetPath("/assets/img/blog-4.jpg"),
   },
   {
     titleEn: "What are the luxury buses on the Tehran - Mashhad route?",
     titleFa: "اتوبوس های لوکس مسیر تهران - مشهد کدام اند؟",
-    image: "/assets/img/blog-6.jpg",
+    image: assetPath("/assets/img/blog-6.jpg"),
   },
   {
     titleEn: "Why buy bus tickets online?",
     titleFa: "چرا بلیط اتوبوس را آنلاین بخریم؟",
-    image: "/assets/img/blog5.jpg",
+    image: assetPath("/assets/img/blog5.jpg"),
   },
 ];
 
