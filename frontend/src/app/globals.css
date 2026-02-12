@@ -23,7 +23,7 @@
 body {
   background: #f5f6f8;
   direction: rtl;
-  font-family: var(--font-noto-arabic), var(--font-plus-jakarta), system-ui, sans-serif;
+  font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 img {
