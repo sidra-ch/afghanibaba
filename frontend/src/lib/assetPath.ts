@@ -1,9 +1,14 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-export const assetPath = (path: string) => {
-  if (path.startsWith("/")) {
-    return `${basePath}${path}`;
+const joinPath = (prefix: string, suffix: string) => {
+  if (!prefix) {
+    return suffix.startsWith("/") ? suffix : `/${suffix}`;
   }
 
-  return `${basePath}/${path}`;
+  const normalizedPrefix = prefix.endsWith("/") ? prefix.slice(0, -1) : prefix;
+  const normalizedSuffix = suffix.startsWith("/") ? suffix : `/${suffix}`;
+
+  return `${normalizedPrefix}${normalizedSuffix}`;
 };
+
+export const assetPath = (path: string) => joinPath(basePath, path);
