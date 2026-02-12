@@ -42,9 +42,11 @@ The project is configured with the following files:
 
 ### `vercel.json`
 Located at the repository root, this file configures:
-- Build command: `cd frontend && npm install && npm run build`
+- Build command: `cd frontend && npm run build`
 - Output directory: `frontend/out`
-- Custom commands for installation and development
+- Install command: `cd frontend && npm ci`
+- Clean URLs: Enabled (removes `.html` extensions)
+- Trailing slash: Enabled (matches Next.js config)
 
 ### `frontend/next.config.ts`
 Configures Next.js with:
@@ -80,9 +82,11 @@ After deployment:
 ## Troubleshooting
 
 ### 404 Errors
-- Ensure you're accessing routes with trailing slashes (e.g., `/flights/` not `/flights`)
-- Check that the `vercel.json` is at the repository root
+- The `vercel.json` includes `cleanUrls: true` and `trailingSlash: true` to properly handle static routes
+- Ensure the `vercel.json` is at the repository root
 - Verify the build completed successfully in the Vercel deployment logs
+- Check that the output directory is set to `frontend/out`
+- If still seeing 404s, try re-deploying from the Vercel dashboard
 
 ### Images Not Loading
 - Check browser console for 404 errors on image paths
