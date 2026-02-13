@@ -11,13 +11,27 @@ const getPaging = (req) => {
   return { limit, skip };
 };
 
-router.get("/", async (req, res) => {
+const listBuses = async (req, res) => {
   try {
     const filters = {};
-    if (req.query.origin) filters.origin = String(req.query.origin).trim();
-    if (req.query.destination) filters.destination = String(req.query.destination).trim();
+    const origin = req.query.origin || req.query.from;
+    const destination = req.query.destination || req.query.to;
+    if (origin) filters.origin = String(origin).trim();
+    if (destination) filters.destination = String(destination).trim();
     if (req.query.company) filters.company = String(req.query.company).trim();
+    if (req.query.vendorId) filters.vendorId = String(req.query.vendorId).trim();
     if (req.query.isActive) filters.isActive = req.query.isActive === "true";
+
+    if (req.query.date) {
+      const date = new Date(String(req.query.date));
+      if (!Number.isNaN(date.getTime())) {
+        const start = new Date(date);
+        start.setHours(0, 0, 0, 0);
+        const end = new Date(date);
+        end.setHours(23, 59, 59, 999);
+        filters.departureTime = { $gte: start, $lte: end };
+      }
+    }
 
     const { limit, skip } = getPaging(req);
     const items = await Bus.find(filters)
@@ -29,7 +43,10 @@ router.get("/", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "FAILED_TO_LIST_BUSES" });
   }
-});
+};
+
+router.get("/", listBuses);
+router.get("/search", listBuses);
 
 router.get("/:id", async (req, res) => {
   try {
