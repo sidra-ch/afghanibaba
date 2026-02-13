@@ -40,7 +40,7 @@ export default function Home() {
   const internationalAirlines = ["IranAirtour", "QeshmAir", "AirArabia", "Mahan Airlines", "Flydubai", "Emirates"];
 
   return (
-    <div className="min-h-screen bg-gray-50" style={{ direction: 'rtl', fontFamily: 'Tahoma, Arial, sans-serif' }}>
+    <div className="min-h-screen flex-col bg-gray-50" style={{ direction: 'rtl', fontFamily: 'Tahoma, Arial, sans-serif' }}>
       <Navbar />
 
       <main>
@@ -53,7 +53,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 mx-auto h-full max-w-6xl px-4">
-            <div className="flex h-full flex-col justify-center pt-8">
+            <div className="flex h-full flex-col justify-end pt-8 pb-16">
               <h1 className="text-right text-3xl font-bold text-white md:text-5xl">
                 بلیط پرواز، هتل، اتوبوس و تور را یکجا رزرو کنید.
               </h1>
@@ -433,7 +433,6 @@ export default function Home() {
             <div className="text-right">
               <h3 className="text-sm font-semibold text-gray-900 mb-3">تماس</h3>
               <ul className="text-xs text-gray-600 space-y-2">
-                <li>۰۲۱ - ۴۳۹۰۰۰۰۰</li>
                 <li>info@afghanibaba.com</li>
                 <li>کابل، افغانستان</li>
               </ul>

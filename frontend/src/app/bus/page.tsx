@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import type { FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/layout/Navbar";
+import BusNavbar from "@/components/layout/BusNavbar";
 import Footer from "@/components/layout/Footer";
 import { assetPath } from "@/lib/assetPath";
 import Link from "next/link";
-import { Plane, Bus, MapPin, ChevronDown, Home, Hotel, ArrowLeftRight, X } from "lucide-react";
+import { MapPin, ChevronDown, ArrowLeftRight, X } from "lucide-react";
 
 const companies = ["افغان‌گلف", "کلیدی تراول", "امان ترانسپورت", "شاه ترانس"];
 
@@ -41,6 +42,15 @@ const faqItems = [
 
 export default function BusPage() {
   const router = useRouter();
+  const [showAuth, setShowAuth] = useState(false);
+  const [authMode, setAuthMode] = useState<"login" | "register">("login");
+  const [authForm, setAuthForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
   const [searchParams, setSearchParams] = useState({ origin: "", destination: "", date: "", passengers: 1 });
   const [filteredBuses, setFilteredBuses] = useState(mockBuses);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -66,9 +76,115 @@ export default function BusPage() {
     router.push(`/bus-info?${queryParams.toString()}`);
   };
 
+  const handleAuthSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    if (authMode === "register" && authForm.password !== authForm.confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+    setShowAuth(false);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
+      <BusNavbar onLoginClick={() => setShowAuth(true)} />
+
+      {showAuth && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+          <div className="w-full max-w-md rounded-2xl bg-white shadow-2xl">
+            <div className="flex items-center justify-between border-b px-6 py-4">
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  onClick={() => setAuthMode("login")}
+                  className={`text-sm font-semibold ${authMode === "login" ? "text-gray-900" : "text-gray-500"}`}
+                >
+                  Login
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAuthMode("register")}
+                  className={`text-sm font-semibold ${authMode === "register" ? "text-gray-900" : "text-gray-500"}`}
+                >
+                  Register
+                </button>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowAuth(false)}
+                className="text-gray-500 hover:text-gray-900"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <form onSubmit={handleAuthSubmit} className="px-6 py-6 space-y-4">
+              {authMode === "register" && (
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Full name</label>
+                  <input
+                    type="text"
+                    required
+                    value={authForm.name}
+                    onChange={(e) => setAuthForm({ ...authForm, name: e.target.value })}
+                    className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm"
+                  />
+                </div>
+              )}
+              <div>
+                <label className="block text-sm text-gray-600 mb-2">Email</label>
+                <input
+                  type="email"
+                  required
+                  value={authForm.email}
+                  onChange={(e) => setAuthForm({ ...authForm, email: e.target.value })}
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm"
+                />
+              </div>
+              {authMode === "register" && (
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Phone number</label>
+                  <input
+                    type="tel"
+                    required
+                    value={authForm.phone}
+                    onChange={(e) => setAuthForm({ ...authForm, phone: e.target.value })}
+                    className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm"
+                  />
+                </div>
+              )}
+              <div>
+                <label className="block text-sm text-gray-600 mb-2">Password</label>
+                <input
+                  type="password"
+                  required
+                  value={authForm.password}
+                  onChange={(e) => setAuthForm({ ...authForm, password: e.target.value })}
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm"
+                />
+              </div>
+              {authMode === "register" && (
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Confirm password</label>
+                  <input
+                    type="password"
+                    required
+                    value={authForm.confirmPassword}
+                    onChange={(e) => setAuthForm({ ...authForm, confirmPassword: e.target.value })}
+                    className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm"
+                  />
+                </div>
+              )}
+              <button
+                type="submit"
+                className="w-full rounded-lg bg-yellow-400 py-3 text-sm font-semibold text-black hover:bg-yellow-500"
+              >
+                {authMode === "login" ? "Login" : "Create account"}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
       <main>
         {/* Hero with Search at Bottom */}
         <div className="relative" style={{ height: "500px" }}>
@@ -78,36 +194,8 @@ export default function BusPage() {
           
           <div className="relative z-10 h-full flex flex-col justify-end pb-0">
             {/* Search Form - Positioned at hero bottom */}
-            <div className="max-w-6xl mx-auto px-4 w-full" style={{ transform: "translateY(50%)" }}>
+            <div className="max-w-7xl mx-auto px-4 w-full" style={{ transform: "translateY(50%)" }}>
               <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-                {/* Tabs Navigation */}
-                <div className="flex justify-around border-b text-sm font-medium">
-                  <Link href="/flights" className="py-4 px-2 text-gray-500 hover:text-gray-900 flex flex-col items-center gap-1">
-                    <Plane size={20} />
-                    <span>پرواز داخلی</span>
-                  </Link>
-                  <Link href="/flights" className="py-4 px-2 text-gray-500 hover:text-gray-900 flex flex-col items-center gap-1">
-                    <Plane size={20} />
-                    <span>پرواز خارجی</span>
-                  </Link>
-                  <div className="py-4 px-2 text-blue-600 border-b-2 border-blue-600 flex flex-col items-center gap-1">
-                    <Bus size={20} />
-                    <span>اتوبوس</span>
-                  </div>
-                  <Link href="/tour" className="py-4 px-2 text-gray-500 hover:text-gray-900 flex flex-col items-center gap-1">
-                    <MapPin size={20} />
-                    <span>تور</span>
-                  </Link>
-                  <Link href="/hotels" className="py-4 px-2 text-gray-500 hover:text-gray-900 flex flex-col items-center gap-1">
-                    <Hotel size={20} />
-                    <span>هتل</span>
-                  </Link>
-                  <Link href="/residence" className="py-4 px-2 text-gray-500 hover:text-gray-900 flex flex-col items-center gap-1">
-                    <Home size={20} />
-                    <span>ویلا و اقامتگاه</span>
-                  </Link>
-                </div>
-
                 {/* Search Inputs */}
                 <div className="p-6 flex flex-col md:flex-row gap-4 items-stretch">
                   {/* Origin + Destination Wrapper */}
