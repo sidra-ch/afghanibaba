@@ -9,9 +9,7 @@ const navItems = [
   { label: "بلیط اتوبوس", href: "/bus" },
   { label: "اقامت", href: "/hotels" },
   { label: "تور", href: "/tour" },
-  { label: "ویزا", href: "/visa" },
-  { label: "پنل آژانسی", href: "/agency" },
-  { label: "بیشتر", href: "#" },
+  { label: "ویزا", href: "/insurance" },
 ];
 
 export default function Navbar() {
