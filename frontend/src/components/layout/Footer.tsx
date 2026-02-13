@@ -39,10 +39,25 @@ export default function Footer() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-slate-400">تماس</p>
             <ul className="mt-4 space-y-2 text-sm text-slate-600">
-              <li>۰۲۱ - ۴۳۹۰۰۰۰۰</li>
+              <li>۰۲۰ - ۲۵۰۰۰۰۰</li>
               <li>info@afghanibaba.com</li>
               <li>کابل، افغانستان</li>
             </ul>
+          </div>
+        </div>
+
+        {/* City Links Section */}
+        <div className="mt-8 border-t border-black/5 pt-8">
+          <h4 className="text-lg font-semibold text-slate-900 mb-4">جستجوی بلیط اتوبوس سراسر افغانستان</h4>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس کابل به هرات</Link>
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس هرات به کابل</Link>
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس کابل به مزار شریف</Link>
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس مزار به کابل</Link>
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس کابل به قندهار</Link>
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس کابل به بامیان</Link>
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس کابل به جلال‌آباد</Link>
+            <Link href="#" className="text-slate-600 hover:text-[#FDB713] transition text-sm">بلیط اتوبوس صندی ارزان</Link>
           </div>
         </div>
         
@@ -51,7 +66,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-4 text-sm text-slate-500">
               <Link href="#">قوانین و مقررات</Link>
               <Link href="#">حریم خصوصی</Link>
-              <Link href="#"> نقشه سایت</Link>
+              <Link href="#">سوالات متداول</Link>
             </div>
             <p className="text-sm text-slate-500">
               © ۱۴۰۵ - شرکت خدمات گردشگری افغانی‌بابا - تمامی حقوق محفوظ است
